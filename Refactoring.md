@@ -9,3 +9,7 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+1. Extracting configuration constants to the top of the file outside the function to reduce the amount of context needed to go through that function.
+2. Since the candidate post processing and hashing logic is common, extract that to a separate function so it only needs to be read once of each flow, and so it reduces the branches in the main function flow.
+3. In all `if` statements, bail out and return the result as soon as possible, so the latter branches don't think about the cases already handled above.

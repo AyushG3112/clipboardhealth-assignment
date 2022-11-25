@@ -17,3 +17,13 @@ You will be graded on the level of detail in each ticket, the clarity of the exe
 
 ## Your Breakdown Here
 
+1. Create an API to accept and store the custom IDs for each agent at an facility level.
+    - This will need to be in a new table, since each agent can have multiple custom IDs - one for  each facility.
+    - Time estimate: 3 days
+2. Return the agents custom ID from `getShiftsByFacility` along with the metadata for that agent, and pass that to `generateReport`
+    - If the agent does not yet have a custom ID, return null for custom ID.
+    - Time estimate: 2 days
+3. Modify `generateReport` to display the passed agent custom ID in the PDF instead of the internal ID we have.
+    - If the custom ID is not available, fallback to the internal ID
+    - Time estimate: 2 days
+    
